@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ig_clone/screens/home_screen.dart';
 
 void main() {
   runApp(Instagram());
@@ -9,7 +10,7 @@ class Instagram extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: HomeScreen(),
     );
   }
 }
