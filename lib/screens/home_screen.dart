@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ig_clone/utils/constants.dart';
+import 'package:ig_clone/widgets/stories.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -76,6 +77,14 @@ class HomeScreen extends StatelessWidget {
               color: appTextColor,
               iconSize: 25.0,
             ),
+          ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            Stories(),
           ],
         ),
       ),
