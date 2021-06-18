@@ -84,6 +84,7 @@ class HomeScreen extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         child: Column(
           children: [
+            SizedBox(height: 20.0),
             Stories(),
           ],
         ),
