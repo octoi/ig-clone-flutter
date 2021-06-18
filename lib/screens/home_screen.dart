@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ig_clone/utils/constants.dart';
+import 'package:ig_clone/widgets/posts.dart';
 import 'package:ig_clone/widgets/stories.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -86,6 +87,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             SizedBox(height: 20.0),
             Stories(),
+            Posts(),
           ],
         ),
       ),
