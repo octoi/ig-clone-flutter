@@ -7,7 +7,7 @@ class Story extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
+          margin: EdgeInsets.symmetric(horizontal: 5.0),
           padding: EdgeInsets.all(2.0),
           decoration: BoxDecoration(
             color: appPink,
@@ -20,6 +20,13 @@ class Story extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(height: 5.0),
+        Text(
+          "_panda_",
+          style: TextStyle(
+            color: appTextColor,
+          ),
+        )
       ],
     );
   }
