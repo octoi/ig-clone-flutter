@@ -54,7 +54,7 @@ class Story extends StatelessWidget {
         ),
         SizedBox(height: 5.0),
         Text(
-          isMine ? 'Your Story' : "_panda_",
+          isMine ? 'Your Story' : getRandomUserName(),
           style: TextStyle(
             color: appTextColor,
           ),

@@ -12,10 +12,24 @@ List<String> images = [
   "https://cdn.pixabay.com/photo/2020/03/11/21/06/seal-4923333_960_720.jpg",
 ];
 
+List<String> usernames = [
+  "john_wick",
+  "lorem_ip",
+  "kali_lin",
+  "._ig_cl._",
+  "flutter.",
+  "_animal_",
+  "wild_anim"
+];
+
 Random random = new Random();
 
 String getRandomImage() {
   int randomNumber = random.nextInt(images.length);
-
   return images[randomNumber];
+}
+
+String getRandomUserName() {
+  int randomeNumber = random.nextInt(usernames.length);
+  return usernames[randomeNumber];
 }
