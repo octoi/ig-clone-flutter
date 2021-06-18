@@ -6,7 +6,6 @@ class Posts extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
-      padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
       child: Column(
         children: [
           Post(),
