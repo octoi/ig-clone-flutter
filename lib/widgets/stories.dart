@@ -11,6 +11,11 @@ class Stories extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(width: 20.0),
+          Story(isMine: true),
+          Story(),
+          Story(),
+          Story(),
+          Story(),
           Story(),
           Story(),
           Story(),

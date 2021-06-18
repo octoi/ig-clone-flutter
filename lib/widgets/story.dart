@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ig_clone/utils/constants.dart';
+import 'package:ig_clone/utils/data.dart';
 
 class Story extends StatelessWidget {
   final bool isMine;
@@ -24,9 +25,7 @@ class Story extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 30.0,
-                backgroundImage: NetworkImage(
-                  'https://cdn.pixabay.com/photo/2019/08/21/16/03/panda-4421395_960_720.jpg',
-                ),
+                backgroundImage: NetworkImage(getRandomImage()),
               ),
               isMine
                   ? Positioned(
