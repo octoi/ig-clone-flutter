@@ -9,6 +9,20 @@ class Posts extends StatelessWidget {
       child: Column(
         children: [
           Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
+          Post(),
         ],
       ),
     );
