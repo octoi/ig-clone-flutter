@@ -33,3 +33,9 @@ String getRandomUserName() {
   int randomeNumber = random.nextInt(usernames.length);
   return usernames[randomeNumber];
 }
+
+bool getRandomBool() {
+  int randomNumber = random.nextInt(2);
+
+  return randomNumber == 1;
+}
