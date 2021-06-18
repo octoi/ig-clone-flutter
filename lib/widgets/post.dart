@@ -82,6 +82,31 @@ class Post extends StatelessWidget {
                 icon: Icon(CupertinoIcons.bookmark),
               )
             ],
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 13.0),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  backgroundImage: NetworkImage(getRandomImage()),
+                  radius: 10.0,
+                ),
+                SizedBox(width: 8),
+                Text("Liked by"),
+                SizedBox(width: 2),
+                Text(
+                  getRandomUserName(),
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
+                SizedBox(width: 2),
+                Text("and"),
+                SizedBox(width: 2),
+                Text(
+                  "others",
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
           )
         ],
       ),
