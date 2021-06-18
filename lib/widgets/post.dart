@@ -1,11 +1,15 @@
 import 'dart:ffi';
+import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ig_clone/utils/constants.dart';
 import 'package:ig_clone/utils/data.dart';
 
 class Post extends StatelessWidget {
+  bool isPostLiked = getRandomBool();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,6 +52,36 @@ class Post extends StatelessWidget {
           Image.network(
             getRandomImage(),
             width: MediaQuery.of(context).size.width,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      isPostLiked
+                          ? CupertinoIcons.heart_fill
+                          : CupertinoIcons.heart,
+                    ),
+                    color: isPostLiked ? appPink : null,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(CupertinoIcons.chat_bubble),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(CupertinoIcons.paperplane),
+                  ),
+                ],
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(CupertinoIcons.bookmark),
+              )
+            ],
           )
         ],
       ),
