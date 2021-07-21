@@ -81,11 +81,19 @@ class MessageList extends StatelessWidget {
                       )
                     ],
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.camera_alt_outlined),
-                    color: appTextColor.withOpacity(0.7),
-                    iconSize: 25.0,
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.blue,
+                        radius: 4.0,
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.camera_alt_outlined),
+                        color: appTextColor.withOpacity(0.7),
+                        iconSize: 25.0,
+                      ),
+                    ],
                   )
                 ],
               ),
