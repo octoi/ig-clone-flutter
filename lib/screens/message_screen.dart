@@ -33,6 +33,19 @@ class MessageScreen extends StatelessWidget {
             ),
           ],
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(CupertinoIcons.videocam),
+            color: appTextColor,
+            iconSize: 35.0,
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.edit_outlined),
+            color: appTextColor,
+          ),
+        ],
       ),
     );
   }
