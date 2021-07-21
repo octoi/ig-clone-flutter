@@ -1,15 +1,9 @@
-import 'dart:ffi';
-import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ig_clone/utils/constants.dart';
 import 'package:ig_clone/utils/data.dart';
 
 class Post extends StatelessWidget {
-  bool isPostLiked = getRandomBool();
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -58,15 +52,7 @@ class Post extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      isPostLiked
-                          ? CupertinoIcons.heart_fill
-                          : CupertinoIcons.heart,
-                    ),
-                    color: isPostLiked ? appPink : null,
-                  ),
+                  LikeButton(),
                   IconButton(
                     onPressed: () {},
                     icon: Icon(CupertinoIcons.chat_bubble),
@@ -110,6 +96,30 @@ class Post extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class LikeButton extends StatefulWidget {
+  const LikeButton({Key? key}) : super(key: key);
+
+  @override
+  _LikeButtonState createState() => _LikeButtonState();
+}
+
+class _LikeButtonState extends State<LikeButton> {
+  bool isPostLiked = getRandomBool();
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        setState(() => isPostLiked = !isPostLiked);
+      },
+      icon: Icon(
+        isPostLiked ? CupertinoIcons.heart_fill : CupertinoIcons.heart,
+      ),
+      color: isPostLiked ? appPink : null,
     );
   }
 }
