@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ig_clone/screens/message_screen.dart';
 import 'package:ig_clone/utils/constants.dart';
 import 'package:ig_clone/widgets/posts.dart';
 import 'package:ig_clone/widgets/stories.dart';
@@ -17,27 +18,42 @@ class HomeScreen extends StatelessWidget {
         ),
         centerTitle: false,
         actions: [
-          Stack(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: FaIcon(FontAwesomeIcons.facebookMessenger),
-                color: appTextColor,
-                iconSize: 20.0,
-              ),
-              Positioned(
-                top: 2.0,
-                left: 8.0,
-                child: Container(
-                  padding: EdgeInsets.all(5.0),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: appPink,
-                  ),
-                  child: Center(child: Text("3")),
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return MessageScreen();
+                },
+              ));
+            },
+            child: Stack(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return MessageScreen();
+                      },
+                    ));
+                  },
+                  icon: FaIcon(FontAwesomeIcons.facebookMessenger),
+                  color: appTextColor,
+                  iconSize: 20.0,
                 ),
-              )
-            ],
+                Positioned(
+                  top: 2.0,
+                  left: 8.0,
+                  child: Container(
+                    padding: EdgeInsets.all(5.0),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: appPink,
+                    ),
+                    child: Center(child: Text("3")),
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
