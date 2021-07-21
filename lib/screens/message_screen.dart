@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ig_clone/utils/constants.dart';
 import 'package:ig_clone/utils/data.dart';
+import 'package:ig_clone/widgets/message_lists.dart';
 
 class MessageScreen extends StatelessWidget {
   const MessageScreen({Key? key}) : super(key: key);
@@ -49,6 +50,7 @@ class MessageScreen extends StatelessWidget {
             ),
           ],
           bottom: TabBar(
+            indicatorColor: appTextColor,
             tabs: [
               Tab(
                 child: Text('Primary', style: TextStyle(color: appTextColor)),
@@ -60,8 +62,8 @@ class MessageScreen extends StatelessWidget {
           ),
         ),
         body: TabBarView(children: [
-          Icon(Icons.directions_car),
-          Icon(Icons.directions_transit),
+          MessageList(),
+          MessageList(),
         ]),
       ),
     );
